@@ -50,11 +50,11 @@ setup(name='astrorapid',
     # requirements files see:
     # https://packaging.python.org/en/latest/requirements.html
     install_requires=[
-        'tensorflow',
-        'keras',
-        'keras-tcn',
+#        'tensorflow',
+#        'keras',
+#        'keras-tcn',
         'scikit-learn',
-        'astropy',
+#        'astropy',
         'pandas',
         'extinction==0.4'
     ],

@@ -29,8 +29,8 @@ CLASS_COLOR = {'Pre-explosion': 'grey', 'SNIa-norm': 'tab:green', 'SNIbc': 'tab:
                'SNIa-91bg': 'tab:red', 'SNIa-x': 'tab:purple', 'point-Ia': 'tab:brown', 'Kilonova': '#aaffc3',
                'SLSN-I': 'tab:olive', 'PISN': 'tab:cyan', 'ILOT': '#FF1493', 'CART': 'navy', 'TDE': 'tab:pink',
                'AGN': 'bisque', 'Ia': 'tab:green', 'SLSN': 'tab:olive', 'II': 'tab:blue', 'IIn': 'tab:brown',
-               'Ibc': 'tab:orange', 'CC': 'blue'}
-PB_COLOR = {'u': 'tab:blue', 'g': 'tab:blue', 'r': 'tab:orange', 'i': 'm', 'z': 'k', 'Y': 'y'}
+               'Ibc': 'tab:orange', 'Cepheid': 'blue'}
+PB_COLOR = {'u ': 'tab:blue', 'g ': 'tab:blue', 'r ': 'tab:orange', 'i ': 'm', 'z ': 'k', 'Y ': 'y'}
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 

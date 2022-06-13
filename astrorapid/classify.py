@@ -25,12 +25,22 @@ except ImportError:
     print("Warning: You will need to install 'matplotlib' if you wish to plot the classifications.")
 
 
-CLASS_COLOR = {'Pre-explosion': 'grey', 'SNIa-norm': 'tab:green', 'SNIbc': 'tab:orange', 'SNII': 'tab:blue',
-               'SNIa-91bg': 'tab:red', 'SNIa-x': 'tab:purple', 'point-Ia': 'tab:brown', 'Kilonova': '#aaffc3',
-               'SLSN-I': 'tab:olive', 'PISN': 'tab:cyan', 'ILOT': '#FF1493', 'CART': 'navy', 'TDE': 'tab:pink',
-               'AGN': 'bisque', 'Ia': 'tab:green', 'SLSN': 'tab:olive', 'II': 'tab:blue', 'IIn': 'tab:brown',
-               'Ibc': 'tab:orange', 'Cepheid': 'blue'}
-PB_COLOR = {'u ': 'tab:blue', 'g ': 'tab:blue', 'r ': 'tab:orange', 'i ': 'm', 'z ': 'k', 'Y ': 'y'}
+#CLASS_COLOR = {'Pre-explosion': 'grey', 'SNIa-norm': 'tab:green', 'SNIbc': 'tab:orange', 'SNII': 'tab:blue',
+#               'SNIa-91bg': 'tab:red', 'SNIa-x': 'tab:purple', 'point-Ia': 'tab:brown', 'Kilonova': '#aaffc3',
+#               'SLSN-I': 'tab:olive', 'PISN': 'tab:cyan', 'ILOT': '#FF1493', 'CART': 'navy', 'TDE': 'tab:pink',
+#               'AGN': 'bisque', 'Ia': 'tab:green', 'SLSN': 'tab:olive', 'II': 'tab:blue', 'IIn': 'tab:brown',
+#               'Ibc': 'tab:orange', 'Cepheid': 'blue'}
+
+
+CLASS_COLOR = {'Pre-explosion': 'grey', 'Ia': 'tab:green', 'Ibc': 'tab:orange', 'II': 'tab:blue',
+               '91bg': 'tab:red', 'Iax': 'tab:purple', 'M-dwarf-Flare': 'tab:brown', 'KN': '#aaffc3', 'SLSN': 'tab:olive', 'PISN': 'tab:cyan', 'ILOT': '#FF1493', 'CART': 'navy', 'TDE': 'tab:pink', 'AGN': 'bisque', 'Dwarf-Novae': 'tab:green', 'uLens': 'tab:olive', 'Delta-Scuti': 'tab:blue', 'EB': 'tab:brown', 'Cepheid': 'tab:orange'}
+
+PB_COLOR = {'u ': 'tab:blue', 
+            'g ': 'tab:blue', 
+            'r ': 'tab:orange', 
+            'i ': 'm', 
+            'z ': 'k', 
+            'Y ': 'y'}
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 

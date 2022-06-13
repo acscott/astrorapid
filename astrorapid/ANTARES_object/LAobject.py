@@ -360,7 +360,7 @@ class LAobject(BaseMixin):
         # this forces only some filters will be used for feature computation
         # this is not ideal, but a necessary stop-gap while we revise
         # the PropertyTable SQL
-        self._good_filters = ['u ', 'g ', 'r ', 'i ', 'z ', 'Y ']
+        self._good_filters = ['u', 'g', 'r', 'i', 'z', 'Y']
         self._good_filter_wave = np.array([3569.5, 4766.5, 6214.5, 7544.5, 8707.5, 10039.5])
 
         use_filters = set(self._good_filters) & self.filters

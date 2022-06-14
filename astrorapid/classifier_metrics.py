@@ -23,7 +23,7 @@ try:
     plt.rcParams['font.serif'] = ['Computer Modern Roman'] + plt.rcParams['font.serif']
 
     font = {'family': 'normal',
-            'size': 34}
+            'size': 20}
 
     matplotlib.rc('font', **font)
 except ImportError:

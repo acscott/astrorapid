@@ -32,11 +32,10 @@ except ImportError:
 #               'Ibc': 'tab:orange', 'Cepheid': 'blue'}
 
 
-CLASS_COLOR = {'Pre-explosion': 'grey', 'Ia': 'tab:green', 'Ibc': 'tab:orange', 'II': 'tab:blue',
-               '91bg': 'tab:red', 'Iax': 'tab:purple', 'M-dwarf-Flare': 'tab:brown', 'KN': '#aaffc3', 'SLSN': 'tab:olive', 'PISN': 'tab:cyan', 'ILOT': '#FF1493', 'CART': 'navy', 'TDE': 'tab:pink', 'AGN': 'bisque', 'Dwarf-Novae': 'tab:green', 'uLens': 'tab:olive', 'Delta-Scuti': 'tab:blue', 'EB': 'tab:brown', 'Cepheid': 'tab:orange'}
+CLASS_COLOR = {'Pre-explosion': 'grey', 'Ia': 'tab:green', 'Ibc': 'tab:orange', 'II': 'tab:blue', '91bg': 'tab:red', 'Iax': 'tab:purple', 'M-dwarf-Flare': 'tab:brown', 'KN': '#aaffc3', 'SLSN': 'tab:olive', 'PISN': 'tab:cyan', 'ILOT': '#FF1493', 'CART': 'navy', 'TDE': 'tab:pink', 'AGN': 'bisque', 'Dwarf-Novae': 'darkgreen', 'uLens': 'lightcoral', 'Delta-Scuti': '#228B22', 'EB': '#FFA07A', 'Cepheid': '#aa6e28'}
 
 PB_COLOR = {'u ': 'tab:blue', 
-            'g ': 'tab:blue', 
+            'g ': 'tab:green', 
             'r ': 'tab:orange', 
             'i ': 'm', 
             'z ': 'k', 

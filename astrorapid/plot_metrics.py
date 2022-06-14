@@ -26,14 +26,14 @@ except ImportError:
 
 COLORS = ['grey', 'tab:green', 'tab:orange', 'tab:blue', 'tab:red', 'tab:purple', 'tab:brown', '#aaffc3', 'tab:olive', 'tab:cyan', '#FF1493', 'navy', 'tab:pink', 'lightcoral', '#228B22', '#aa6e28', '#FFA07A', 'm', 'y', 'k', 'tab:purple', 'bisque', 'darkgreen', 'aquamarine', 'lightpink', 'gold', 'darkviolet', 'peru', 'lime', 'cadetblue', 'deeppink', 'mediumvioletred']
 COLCLASS = {'Pre-explosion': 'grey', 'Ia': 'tab:green', 'Ibc': 'tab:orange', 'II': 'tab:blue', '91bg': 'tab:red', 'Iax': 'tab:purple', 'M-dwarf-Flare': 'tab:brown', 'KN': '#aaffc3', 'SLSN': 'tab:olive', 'PISN': 'tab:cyan', 'ILOT': '#FF1493', 'CART': 'navy', 'TDE': 'tab:pink', 'AGN': 'bisque', 'Dwarf-Novae': 'darkgreen', 'uLens': 'lightcoral', 'Delta-Scuti': '#228B22', 'EB': '#FFA07A', 'Cepheid': '#aa6e28'}
-COLPB = {'u ': 'tab:blue', 
-            'g ': 'tab:green', 
-            'r ': 'tab:orange', 
-            'i ': 'm', 
-            'z ': 'k', 
-            'Y ': 'y'}
-MARKPB = {'u ': "v", 'g ': 'o', 'r ': 's', 'i ': 'x', 'z ': "1", 'Y ': "*"}
-ALPHAPB = {'u ': 0.7, 'g ': 0.7, 'r ': 0.7, 'i ': 0.7, 'z ': 0.7, 'Y ': 0.7}
+COLPB = {'u': 'tab:blue', 
+            'g': 'tab:green', 
+            'r': 'tab:orange', 
+            'i': 'm', 
+            'z': 'k', 
+            'Y': 'y'}
+MARKPB = {'u': "v", 'g': 'o', 'r': 's', 'i': 'x', 'z': "1", 'Y': "*"}
+ALPHAPB = {'u': 0.7, 'g': 0.7, 'r': 0.7, 'i': 0.7, 'z': 0.7, 'Y': 0.7}
 WLOGLOSS_WEIGHTS = [1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2]
 MINTIME = -70
 MAXTIME = 80

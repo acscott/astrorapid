@@ -29,8 +29,7 @@ try:
 except ImportError:
     print("Warning: You will need to install matplotlib if you want to plot any metric")
 
-COLORS = ['tab:green', 'tab:orange', 'tab:blue', 'tab:red', 'tab:purple', 'tab:brown', '#aaffc3', 'tab:olive',
-          'tab:cyan', '#FF1493', 'navy', 'tab:pink', 'lightcoral', '#228B22', '#aa6e28', '#FFA07A']
+COLORS = ['grey', 'tab:green', 'tab:orange', 'tab:blue', 'tab:red', 'tab:purple', 'tab:brown', '#aaffc3', 'tab:olive', 'tab:cyan', '#FF1493', 'navy', 'tab:pink', 'lightcoral', '#228B22', '#aa6e28', '#FFA07A', 'm', 'y', 'k', 'tab:purple', 'bisque', 'darkgreen', 'aquamarine', 'lightpink', 'gold', 'darkviolet', 'peru', 'lime', 'cadetblue', 'deeppink', 'mediumvioletred']
 
 
 def plasticc_log_loss(y_true, y_pred, relative_class_weights=None):

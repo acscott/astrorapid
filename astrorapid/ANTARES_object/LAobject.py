@@ -362,10 +362,10 @@ class LAobject(BaseMixin):
         # the PropertyTable SQL
         
         # when TRAINING model
-        #self._good_filters = ['u', 'g', 'r', 'i', 'z', 'Y']
+        self._good_filters = ['u', 'g', 'r', 'i', 'z', 'Y']
         
         # when TESTING model
-        self._good_filters = ['u ', 'g ', 'r ', 'i ', 'z ', 'Y ']
+        #self._good_filters = ['u ', 'g ', 'r ', 'i ', 'z ', 'Y ']
         self._good_filter_wave = np.array([3569.5, 4766.5, 6214.5, 7544.5, 8707.5, 10039.5])
 
         use_filters = set(self._good_filters) & self.filters

@@ -10,7 +10,7 @@ from astrorapid.ANTARES_object.LAobject import LAobject
 
 class InputLightCurve(object):
     def __init__(self, mjd, flux, fluxerr, passband, photflag, ra, dec, objid, redshift=None, mwebv=None,
-                 known_redshift=True, training_set_parameters=None, calculate_t0=None, other_meta_data={}):
+                 known_redshift=True, training_set_parameters=None, calculate_t0=None, other_meta_data={'hostgal_photoz', 'hostgal_mag_u', 'hostgal_mag_g', 'hostgal_mag_r', 'hostgal_mag_i', 'hostgal_mag_z', 'hostgal_mag_Y', 'hostgal_snsep', 'hostgal_ddlr', 'hostgal_ellipticity', 'hostgal_sqradius', 'hostgal2_photoz', 'hostgal2_mag_u', 'hostgal2_mag_g', 'hostgal2_mag_r', 'hostgal2_mag_i', 'hostgal2_mag_z', 'hostgal2_mag_Y', 'hostgal2_snsep', 'hostgal2_ddlr', 'hostgal2_ellipticity', 'hostgal2_sqradius'}):
         """
 
         Parameters
@@ -140,6 +140,7 @@ class InputLightCurve(object):
         outlc = laobject.get_lc_as_table()
         outlc.meta = {'redshift': self.redshift, 'b': self.b, 'mwebv': self.mwebv, 'trigger_mjd': self.trigger_mjd}
         if self.other_meta_data:
+            print("self.other_meta_data", self.other_meta_data)
             outlc.meta.update(self.other_meta_data)
 
         if self.training_set_parameters is not None:

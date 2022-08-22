@@ -6,6 +6,7 @@ import pandas as pd
 
 from astrorapid import helpers, model_early_lightcurve
 from astrorapid.ANTARES_object.LAobject import LAobject
+import logging
 
 
 class InputLightCurve(object):
@@ -68,7 +69,7 @@ class InputLightCurve(object):
             should be entered into the 'contextual_info' tuple in the create_custom_classifier function if desired.
         """
         self.mjd = np.array(mjd)
-        print(self.mjd)
+        logging.warning(f"self.mjd {self.mjd}")
         self.flux = np.array(flux)
         self.fluxerr = np.array(fluxerr)
         self.passband = np.array(passband)
@@ -82,7 +83,7 @@ class InputLightCurve(object):
         self.training_set_parameters = training_set_parameters
         self.calculate_t0 = calculate_t0
         self.other_meta_data = other_meta_data
-        print(self.other_meta_data)
+        logging.warning(f"self.other_meta_data  {self.other_meta_data}")
         if training_set_parameters is not None:
             self.class_number = training_set_parameters['class_number']
             self.peakmjd = training_set_parameters['peakmjd']
@@ -152,19 +153,19 @@ class InputLightCurve(object):
 
         obsid = np.arange(len(self.t))
 
-        print("before LA object")
+        logging.warning("before LA object")
         laobject = LAobject(locusId=self.objid, objectId=self.objid, time=self.t, flux=self.flux, fluxErr=self.fluxerr,
                             obsId=obsid, passband=self.passband, per=False, mag=False,
                             photflag=self.photflag, z=self.redshift, mwebv=self.mwebv)
 
-        print("after LA Objct and before get_lc_as_table")
+        logging.warning("after LA Objct and before get_lc_as_table")
         outlc = laobject.get_lc_as_table()
-        print("outlc", outlc)
+        logging.warning(f"outlc {outlc}")
         outlc.meta = {'redshift': self.redshift, 'b': self.b, 'mwebv': self.mwebv, 'trigger_mjd': self.trigger_mjd}
         if self.other_meta_data:
-            print("self.other_meta_data", self.other_meta_data)
+            logging.warning(f"self.other_meta_data {self.other_meta_data}")
             outlc.meta.update(self.other_meta_data)
-            print("updated!")
+            logging.warning("updated!")
 
         if self.training_set_parameters is not None:
             if self.calculate_t0 is not False:

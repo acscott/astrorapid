@@ -10,7 +10,24 @@ from astrorapid.ANTARES_object.LAobject import LAobject
 
 class InputLightCurve(object):
     def __init__(self, mjd, flux, fluxerr, passband, photflag, ra, dec, objid, redshift=None, mwebv=None,
-                 known_redshift=True, training_set_parameters=None, calculate_t0=None, other_meta_data={'hostgal_photoz', 'hostgal_mag_u', 'hostgal_mag_g', 'hostgal_mag_r', 'hostgal_mag_i', 'hostgal_mag_z', 'hostgal_mag_Y', 'hostgal_snsep', 'hostgal_ddlr', 'hostgal_ellipticity', 'hostgal_sqradius', 'hostgal2_photoz', 'hostgal2_mag_u', 'hostgal2_mag_g', 'hostgal2_mag_r', 'hostgal2_mag_i', 'hostgal2_mag_z', 'hostgal2_mag_Y', 'hostgal2_snsep', 'hostgal2_ddlr', 'hostgal2_ellipticity', 'hostgal2_sqradius'}):
+                 known_redshift=True, training_set_parameters=None, calculate_t0=None, other_meta_data={'hostgal_photoz': hostgal_photoz, 
+                'hostgal_mag_u': hostgal_mag_u, 'hostgal_magerr_u': hostgal_magerr_u, 
+                'hostgal_mag_g': hostgal_mag_g, 'hostgal_magerr_g': hostgal_magerr_g, 
+                'hostgal_mag_r': hostgal_mag_r, 'hostgal_magerr_r': hostgal_magerr_r, 
+                'hostgal_mag_i': hostgal_mag_i, 'hostgal_magerr_i': hostgal_magerr_i, 
+                'hostgal_mag_z': hostgal_mag_z, 'hostgal_magerr_z': hostgal_magerr_z, 
+                'hostgal_mag_Y': hostgal_mag_Y, 'hostgal_magerr_Y': hostgal_magerr_Y, 
+                'hostgal_snsep': hostgal_snsep, 'hostgal_ddlr': hostgal_ddlr,
+                'hostgal_ellipticity': hostgal_ellipticity, 'hostgal_sqradius': hostgal_sqradius,
+                'hostgal2_photoz': hostgal2_photoz, 
+                'hostgal2_mag_u': hostgal2_mag_u, 'hostgal2_magerr_u': hostgal2_magerr_u, 
+                'hostgal2_mag_g': hostgal2_mag_g, 'hostgal2_magerr_g': hostgal2_magerr_g, 
+                'hostgal2_mag_r': hostgal2_mag_r, 'hostgal2_magerr_r': hostgal2_magerr_r, 
+                'hostgal2_mag_i': hostgal2_mag_i, 'hostgal2_magerr_i': hostgal2_magerr_i, 
+                'hostgal2_mag_z': hostgal2_mag_z, 'hostgal2_magerr_z': hostgal2_magerr_z, 
+                'hostgal2_mag_Y': hostgal2_mag_Y, 'hostgal2_magerr_Y': hostgal2_magerr_Y, 
+                'hostgal2_snsep': hostgal2_snsep, 'hostgal2_ddlr': hostgal2_ddlr,
+                'hostgal2_ellipticity': hostgal2_ellipticity, 'hostgal2_sqradius': hostgal2_sqradius}):
         """
 
         Parameters

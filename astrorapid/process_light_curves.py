@@ -67,8 +67,8 @@ class InputLightCurve(object):
             E.g. other_meta_data={'hosttype': 3, 'dist_from_center': 400}. These keys are the keys that
             should be entered into the 'contextual_info' tuple in the create_custom_classifier function if desired.
         """
-
         self.mjd = np.array(mjd)
+        print(self.mjd)
         self.flux = np.array(flux)
         self.fluxerr = np.array(fluxerr)
         self.passband = np.array(passband)
@@ -82,6 +82,7 @@ class InputLightCurve(object):
         self.training_set_parameters = training_set_parameters
         self.calculate_t0 = calculate_t0
         self.other_meta_data = other_meta_data
+        print(self.other_meta_data)
         if training_set_parameters is not None:
             self.class_number = training_set_parameters['class_number']
             self.peakmjd = training_set_parameters['peakmjd']
@@ -142,6 +143,7 @@ class InputLightCurve(object):
 
     def preprocess_light_curve(self):
         """ Preprocess light curve. """
+        print("Start preprocess_light_curve")
 
         # Account for distance and time dilation if redshift is known
         if self.known_redshift and self.redshift is not None:
@@ -150,15 +152,19 @@ class InputLightCurve(object):
 
         obsid = np.arange(len(self.t))
 
+        print("before LA object")
         laobject = LAobject(locusId=self.objid, objectId=self.objid, time=self.t, flux=self.flux, fluxErr=self.fluxerr,
                             obsId=obsid, passband=self.passband, per=False, mag=False,
                             photflag=self.photflag, z=self.redshift, mwebv=self.mwebv)
 
+        print("after LA Objct and before get_lc_as_table")
         outlc = laobject.get_lc_as_table()
+        print("outlc", outlc)
         outlc.meta = {'redshift': self.redshift, 'b': self.b, 'mwebv': self.mwebv, 'trigger_mjd': self.trigger_mjd}
         if self.other_meta_data:
             print("self.other_meta_data", self.other_meta_data)
             outlc.meta.update(self.other_meta_data)
+            print("updated!")
 
         if self.training_set_parameters is not None:
             if self.calculate_t0 is not False:

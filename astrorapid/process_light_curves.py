@@ -127,7 +127,7 @@ class InputLightCurve(object):
 
     def preprocess_light_curve(self):
         """ Preprocess light curve. """
-        print("Start preprocess_light_curve")
+        #print("Start preprocess_light_curve")
 
         # Account for distance and time dilation if redshift is known
         if self.known_redshift and self.redshift is not None:

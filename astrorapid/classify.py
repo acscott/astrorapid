@@ -104,7 +104,7 @@ class Classify(object):
 
         if model_filepath != '' and os.path.exists(model_filepath):
             self.model_filepath = model_filepath
-            self.contextual_info = ['redshift',] if known_redshift else []
+            self.contextual_info = ['redshift', 'hostgal_photoz', 'hostgal_mag_u', 'hostgal_mag_g', 'hostgal_mag_r', 'hostgal_mag_i', 'hostgal_mag_z', 'hostgal_mag_Y', 'hostgal_snsep', 'hostgal_ddlr', 'hostgal_ellipticity', 'hostgal_sqradius', 'hostgal_zphot_q00', 'hostgal_zphot_q20', 'hostgal_zphot_q50', 'hostgal_zphot_q80', 'hostgal_zphot_q100', 'hostgal2_photoz', 'hostgal2_mag_u', 'hostgal2_mag_g', 'hostgal2_mag_r', 'hostgal2_mag_i', 'hostgal2_mag_z', 'hostgal2_mag_Y', 'hostgal2_snsep', 'hostgal2_ddlr', 'hostgal2_ellipticity', 'hostgal2_sqradius', 'hostgal2_zphot_q00', 'hostgal2_zphot_q20', 'hostgal2_zphot_q50', 'hostgal2_zphot_q80', 'hostgal2_zphot_q100',] if known_redshift else [] #['redshift',] if known_redshift else []
             self.known_redshift = known_redshift
             self.passbands = passbands
             self.class_names = class_names

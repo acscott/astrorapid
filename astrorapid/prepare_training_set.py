@@ -198,77 +198,77 @@ class PrepareTrainingSetArrays(PrepareArrays):
             timesX = np.delete(timesX, deleterows, axis=0)
 
             np.save(os.path.join(self.training_set_dir,
-                                 "X_{}_z{}_b{}_ig{}.npy".format(otherchange, self.contextual_info, self.zcut,
+                                 "X_{}_z{}_b{}_ig{}.npy".format(otherchange, self.zcut,
                                                                     self.bcut, self.ignore_classes)), X)
             np.save(os.path.join(self.training_set_dir,
-                                 "y_{}_z{}_b{}_ig{}.npy".format(otherchange, self.contextual_info, self.zcut,
+                                 "y_{}_z{}_b{}_ig{}.npy".format(otherchange, self.zcut,
                                                                     self.bcut, self.ignore_classes)), y,
                     allow_pickle=True)
             np.save(os.path.join(self.training_set_dir,
-                                 "labels_{}_z{}_b{}_ig{}.npy".format(otherchange, self.contextual_info, self.zcut,
+                                 "labels_{}_z{}_b{}_ig{}.npy".format(otherchange, self.zcut,
                                                                          self.bcut, self.ignore_classes)), labels,
                     allow_pickle=True)
             np.save(os.path.join(self.training_set_dir,
-                                 "tinterp_{}_z{}_b{}_ig{}.npy".format(otherchange, self.contextual_info, self.zcut,
+                                 "tinterp_{}_z{}_b{}_ig{}.npy".format(otherchange, self.zcut,
                                                                           self.bcut, self.ignore_classes)), timesX)
             np.save(os.path.join(self.training_set_dir,
-                                 "objids_{}_z{}_b{}_ig{}.npy".format(otherchange, self.contextual_info, self.zcut,
+                                 "objids_{}_z{}_b{}_ig{}.npy".format(otherchange, self.zcut,
                                                                          self.bcut, self.ignore_classes)), objids_list,
                     allow_pickle=True)
             np.save(os.path.join(self.training_set_dir,
-                                 "objids_train_{}_z{}_b{}_ig{}.npy".format(otherchange, self.contextual_info,
+                                 "objids_train_{}_z{}_b{}_ig{}.npy".format(otherchange,
                                                                                self.zcut,
                                                                                self.bcut, self.ignore_classes)), objids_train,
                     allow_pickle=True)
             np.save(os.path.join(self.training_set_dir,
-                                 "objids_test_{}_z{}_b{}_ig{}.npy".format(otherchange, self.contextual_info,
+                                 "objids_test_{}_z{}_b{}_ig{}.npy".format(otherchange, 
                                                                               self.zcut,
                                                                               self.bcut, self.ignore_classes)), objids_test,
                     allow_pickle=True)
             with open(os.path.join(self.training_set_dir,
-                                   "origlc_{}_z{}_b{}_ig{}.npy".format(otherchange, self.contextual_info, self.zcut,
+                                   "origlc_{}_z{}_b{}_ig{}.npy".format(otherchange, self.zcut,
                                                                            self.bcut, self.ignore_classes)),
                       'wb') as f:
                 pickle.dump(orig_lc, f)
 
         else:
             X = np.load(os.path.join(self.training_set_dir,
-                                     "X_{}_z{}_b{}_ig{}.npy".format(otherchange, self.contextual_info, self.zcut,
+                                     "X_{}_z{}_b{}_ig{}.npy".format(otherchange, self.zcut,
                                                                         self.bcut, self.ignore_classes)), mmap_mode='r')
             y = np.load(os.path.join(self.training_set_dir,
-                                     "y_{}_z{}_b{}_ig{}.npy".format(otherchange, self.contextual_info, self.zcut,
+                                     "y_{}_z{}_b{}_ig{}.npy".format(otherchange, self.zcut,
                                                                         self.bcut, self.ignore_classes)),
                         allow_pickle=True)
             labels = np.load(os.path.join(self.training_set_dir,
-                                          "labels_{}_z{}_b{}_ig{}.npy".format(otherchange, self.contextual_info,
+                                          "labels_{}_z{}_b{}_ig{}.npy".format(otherchange, 
                                                                                   self.zcut, self.bcut,
                                                                                   self.ignore_classes)),
                              allow_pickle=True)
             timesX = np.load(os.path.join(self.training_set_dir,
-                                          "tinterp_{}_z{}_b{}_ig{}.npy".format(otherchange, self.contextual_info,
+                                          "tinterp_{}_z{}_b{}_ig{}.npy".format(otherchange, 
                                                                                    self.zcut, self.bcut,
                                                                                    self.ignore_classes)))
             objids_list = np.load(os.path.join(self.training_set_dir,
                                                "objids_{}_z{}_b{}_ig{}.npy".format(otherchange,
-                                                                                       self.contextual_info, self.zcut,
+                                                                                      self.zcut,
                                                                                        self.bcut, self.ignore_classes)),
                                   allow_pickle=True)
             objids_train = np.load(os.path.join(self.training_set_dir,
                                                 "objids_train_{}_z{}_b{}_ig{}.npy".format(otherchange,
-                                                                                              self.contextual_info,
+                                                                                             
                                                                                               self.zcut,
                                                                                               self.bcut,
                                                                                               self.ignore_classes)),
                                    allow_pickle=True)
             objids_test = np.load(os.path.join(self.training_set_dir,
                                                "objids_test_{}_z{}_b{}_ig{}.npy".format(otherchange,
-                                                                                            self.contextual_info,
+                                                                                           
                                                                                             self.zcut,
                                                                                             self.bcut,
                                                                                             self.ignore_classes)),
                                   allow_pickle=True)
             with open(os.path.join(self.training_set_dir,
-                                   "origlc_{}_z{}_b{}_ig{}.npy".format(otherchange, self.contextual_info, self.zcut,
+                                   "origlc_{}_z{}_b{}_ig{}.npy".format(otherchange, self.zcut,
                                                                            self.bcut, self.ignore_classes)), 'rb') as f:
                 orig_lc = pickle.load(f)
 

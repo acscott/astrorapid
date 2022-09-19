@@ -56,7 +56,7 @@ setup(name='astrorapid',
         'scikit-learn',
 #        'astropy',
         'pandas',
-        'extinction==0.4'
+        'extinction>=0.4,<0.5'
     ],
 
     # List additional groups of dependencies here (e.g. development
